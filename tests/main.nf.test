@@ -1,0 +1,26 @@
+nextflow_pipeline {
+
+    name "Full Integration Tests"
+    script "main.nf"
+
+    test("Should pass.") {
+        tag "pass"
+
+        when {
+            params {
+                input = "$baseDir/tests/data/samplesheet.csv"
+                outdir = "$outputDir"
+
+                kraken2 { db = "$baseDir/tests/data/test_db" }
+
+                max_memory = "2.GB"
+                max_cpus = 1
+            }
+        }
+
+        then {
+                assert workflow.success
+                assert path("$outputDir").exists()
+            }
+    }
+}
