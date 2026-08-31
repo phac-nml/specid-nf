@@ -8,6 +8,8 @@ include { paramsSummaryLog; validateParameters; samplesheetToList } from 'plugin
 
 include { KRAKEN2 } from "../modules/local/kraken2.nf"
 include { CONIFER } from "../modules/local/conifer.nf"
+include { KRAKEN_TOOLS } from "../modules/local/kraken_tools.nf"
+include { KRONA } from "../modules/local/krona.nf"
 
 //include { methodsDescriptionText } from '../subworkflows/local/utils_nfcore_spec-id_pipeline'
 
@@ -39,9 +41,13 @@ workflow SPEC_ID {
     def conifer_outputs = CONIFER(kraken2_assigned.report, file([params.kraken2.db, params.conifer.required_file].join(File.separator)))
     ch_versions = ch_versions.mix(conifer_outputs.versions)
 
+    // Prepare the krona text file
+    def krona_text = KRAKEN_TOOLS(kraken2_assigned.report)
+    ch_versions = ch_versions.mix(krona_text.versions)
 
-
-    
+    def krona_file = KRONA(krona_text.krona_text)
+    ch_versions = ch_versions.mix(krona_file.versions)
+ 
 }
 
 /*
