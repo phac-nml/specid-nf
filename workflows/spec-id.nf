@@ -12,6 +12,7 @@ include { KRAKEN_TOOLS } from "../modules/local/kraken_tools.nf"
 include { KRONA } from "../modules/local/krona.nf"
 include { SEQTK_SEQ } from "../modules/local/seqtk_seq.nf"
 include { GANON } from "../modules/local/ganon.nf"
+include { GAMBIT } from "../modules/local/gambit.nf"
 
 //include { methodsDescriptionText } from '../subworkflows/local/utils_nfcore_spec-id_pipeline'
 
@@ -50,6 +51,16 @@ workflow SPEC_ID {
     def krona_file = KRONA(krona_text.krona_text)
     ch_versions = ch_versions.mix(krona_file.versions)
 
+    if(!params.skip_gambit){
+
+        if(!params.gambit.db){
+            log.error ("No Gambit database passed exiting.")
+            exit 1, "ERROR: Missing Gambit configuration database."
+        }
+        def gambit_out = GAMBIT(ch_input, file(params.gambit.db))
+        ch_versions = ch_versions.mix(gambit_out.versions)
+    }
+
     if(!(params.ganon.db && params.ganon.db_prefix)){
         log.error ("No Ganon database or database prefix passed exiting.")
         exit 1, "ERROR: Missing Ganon configuration database or database prefix."
@@ -59,6 +70,7 @@ workflow SPEC_ID {
     
     def db_prefix = Channel.value(params.ganon.db_prefix)
     def ganon_out = GANON(assemblies_as_reads.fastq, file(params.ganon.db), db_prefix)
+    ch_versions = ch_versions.mix(ganon_out.versions)
 
 
  

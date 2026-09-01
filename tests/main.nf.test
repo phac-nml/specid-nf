@@ -18,6 +18,9 @@ nextflow_pipeline {
                         db_prefix = "ganon_test"
                     }
 
+                skip_gambit = true
+
+
                 max_memory = "2.GB"
                 max_cpus = 1
             }
