@@ -1,0 +1,96 @@
+1	0	no rank	root	15035007
+10239	1	acellular root	Viruses	13714
+10710	186765	species	Lambdavirus lambda	48503
+11118	2499399	family	Coronaviridae	29256
+11308	2499411	family	Orthomyxoviridae	13465
+11320	2955291	no rank	Influenza A virus	13316
+11520	2955465	no rank	Influenza B virus	14393
+11632	2169561	family	Retroviridae	8946
+11646	327045	genus	Lentivirus	8965
+11676	3418650	no rank	Human immunodeficiency virus 1	8955
+11709	3418651	no rank	Human immunodeficiency virus 2	10221
+76804	2732506	order	Nidovirales	29025
+114727	11320	serotype	H1N1 subtype	13316
+114729	11320	serotype	H2N2 subtype	13316
+119210	11320	serotype	H3N2 subtype	13316
+186765	3700837	genus	Lambdavirus	48503
+197911	11308	genus	Alphainfluenzavirus	13316
+197912	11308	genus	Betainfluenzavirus	14393
+211044	114727	no rank	Influenza A virus (A/Puerto Rico/8/1934(H1N1))	13316
+227984	2901879	no rank	SARS coronavirus Tor2	30818
+327045	11632	subfamily	Orthoretrovirinae	8946
+335341	119210	no rank	Influenza A virus (A/New York/392/2004(H3N2))	13316
+488241	114729	no rank	Influenza A virus (A/Korea/426/1968(H2N2))	13316
+518987	11520	no rank	Influenza B virus (B/Lee/1940)	14393
+694002	2501931	genus	Betacoronavirus	30818
+694009	3418604	no rank	Severe acute respiratory syndrome-related coronavirus	30818
+1335626	3433633	no rank	Middle East respiratory syndrome-related coronavirus	30111
+2169561	2732514	order	Ortervirales	8946
+2497569	2732396	phylum	Negarnaviricota	13467
+2497571	2497569	subphylum	Polyploviricotina	13457
+2497577	2497571	class	Insthoviricetes	13465
+2499399	76804	suborder	Cornidovirineae	29256
+2499411	2497577	order	Articulavirales	13465
+2501931	11118	subfamily	Orthocoronavirinae	29256
+2509494	694002	subgenus	Merbecovirus	30273
+2509511	694002	subgenus	Sarbecovirus	30818
+2559587	10239	realm	Riboviria	12570
+2681611	10710	no rank	Escherichia phage Lambda	48503
+2697049	3418604	no rank	Severe acute respiratory syndrome coronavirus 2	30818
+2731341	10239	realm	Duplodnaviria	85929
+2731360	2731341	kingdom	Heunggongvirae	85929
+2731618	2731360	phylum	Uroviricota	79385
+2731619	2731618	class	Caudoviricetes	79385
+2732396	2559587	kingdom	Orthornavirae	12644
+2732397	2559587	kingdom	Pararnavirae	8759
+2732408	2732396	phylum	Pisuviricota	7759
+2732409	2732397	phylum	Artverviricota	8759
+2732506	2732408	class	Pisoniviricetes	7760
+2732514	2732409	class	Revtraviricetes	8759
+2901879	694009	no rank	Severe acute respiratory syndrome coronavirus	30818
+2955291	197911	species	Alphainfluenzavirus influenzae	13316
+2955465	197912	species	Betainfluenzavirus influenzae	14393
+3418604	2509511	species	Betacoronavirus pandemicum	30818
+3418650	11646	species	Lentivirus humimdef1	8955
+3418651	11646	species	Lentivirus humimdef2	10221
+3433633	2509494	species	Betacoronavirus cameli	30111
+3700705	2731619	family	Zimmerviridae	48503
+3700837	3700705	subfamily	Jacobvirinae	48503
+NC_045512.2	2697049	sequence	NC_045512.2	30818
+NC_002023.1	211044	sequence	NC_002023.1	13316
+NC_002021.1	211044	sequence	NC_002021.1	13316
+NC_002022.1	211044	sequence	NC_002022.1	13316
+NC_002017.1	211044	sequence	NC_002017.1	13316
+NC_002019.1	211044	sequence	NC_002019.1	13316
+NC_002018.1	211044	sequence	NC_002018.1	13316
+NC_002016.1	211044	sequence	NC_002016.1	13316
+NC_002020.1	211044	sequence	NC_002020.1	13316
+NC_007378.1	488241	sequence	NC_007378.1	13316
+NC_007375.1	488241	sequence	NC_007375.1	13316
+NC_007376.1	488241	sequence	NC_007376.1	13316
+NC_007374.1	488241	sequence	NC_007374.1	13316
+NC_007381.1	488241	sequence	NC_007381.1	13316
+NC_007382.1	488241	sequence	NC_007382.1	13316
+NC_007377.1	488241	sequence	NC_007377.1	13316
+NC_007380.1	488241	sequence	NC_007380.1	13316
+NC_007373.1	335341	sequence	NC_007373.1	13316
+NC_007372.1	335341	sequence	NC_007372.1	13316
+NC_007371.1	335341	sequence	NC_007371.1	13316
+NC_007366.1	335341	sequence	NC_007366.1	13316
+NC_007369.1	335341	sequence	NC_007369.1	13316
+NC_007368.1	335341	sequence	NC_007368.1	13316
+NC_007367.1	335341	sequence	NC_007367.1	13316
+NC_007370.1	335341	sequence	NC_007370.1	13316
+NC_002204.1	518987	sequence	NC_002204.1	14393
+NC_002205.1	518987	sequence	NC_002205.1	14393
+NC_002206.1	518987	sequence	NC_002206.1	14393
+NC_002207.1	518987	sequence	NC_002207.1	14393
+NC_002208.1	518987	sequence	NC_002208.1	14393
+NC_002209.1	518987	sequence	NC_002209.1	14393
+NC_002210.1	518987	sequence	NC_002210.1	14393
+NC_002211.1	518987	sequence	NC_002211.1	14393
+NC_001802.1	11676	sequence	NC_001802.1	8955
+NC_001722.1	11709	sequence	NC_001722.1	10221
+NC_001416.1	2681611	sequence	NC_001416.1	48503
+NC_019843.3	1335626	sequence	NC_019843.3	30111
+NC_004718.3	227984	sequence	NC_004718.3	30818
