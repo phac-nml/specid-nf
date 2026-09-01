@@ -13,6 +13,7 @@ process GANON {
     output:
     tuple val(meta), path("${meta.id}${params.ganon.rep_output_suffix}"), emit: repersentative
     tuple val(meta), path("${meta.id}${params.ganon.tax_ranks_suffix}"), emit: taxonomic_ranks
+    tuple val(meta), path("${meta.id}${params.ganon.all_suffix}"), emit: all_classifications, optional: true
     tuple val(meta), path("*.log"), emit: logs
     path "versions.yml", emit: versions
 
