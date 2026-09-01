@@ -18,6 +18,10 @@ nextflow_pipeline {
                         db_prefix = "ganon_test"
                     }
 
+                lexicmap {
+                        db = "$baseDir/tests/data/lexicmap/db.lmi"
+                    }
+
                 skip_gambit = true
 
 

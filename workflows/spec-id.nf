@@ -13,6 +13,7 @@ include { KRONA } from "../modules/local/krona.nf"
 include { SEQTK_SEQ } from "../modules/local/seqtk_seq.nf"
 include { GANON } from "../modules/local/ganon.nf"
 include { GAMBIT } from "../modules/local/gambit.nf"
+include { LEXICMAP } from "../modules/local/lexicmap.nf"
 
 //include { methodsDescriptionText } from '../subworkflows/local/utils_nfcore_spec-id_pipeline'
 
@@ -60,6 +61,13 @@ workflow SPEC_ID {
         def gambit_out = GAMBIT(ch_input, file(params.gambit.db))
         ch_versions = ch_versions.mix(gambit_out.versions)
     }
+
+    if(!params.lexicmap.db){
+        log.error ("No lexicmap database passed exiting.")
+        exit 1, "ERROR: Missing lexicmap configuration database."
+    }
+    def lexicmap_out = LEXICMAP(ch_input, file(params.lexicmap.db))
+    ch_versions = ch_versions.mix(lexicmap_out.versions)
 
     if(!(params.ganon.db && params.ganon.db_prefix)){
         log.error ("No Ganon database or database prefix passed exiting.")
