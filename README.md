@@ -36,19 +36,19 @@ Sample sheet layout currently requires only a sample and assembly field, assembl
 
 An schematic of the sample sheet is also provided below:
 
-| sample      | assembly                  |
-| ----------- | ------------------------- |
-| cool_sample | tests/data/tests_fasta.fa |
+| sample      | assembly                  | checkm2                   |
+| ----------- | ------------------------- | ------------------------- |
+| cool_sample | tests/data/tests_fasta.fa | ./path_to_checkm2_db.dmnd |
 
 The following databases are required for using the program:
 
-kraken 2 database (8GB preferred), set via cli as `--kraken2.db /DATABASE/gg` or in the config file
-Gambit database, set via cli as `--gambit.db /DATABASE/gg` or in the config file
-LexicMap database, set via cli as `--lexicmap.db /DATABASE/gg` or in the config file
+kraken 2 database (8GB preferred), set via cli as `--kraken2_db /DATABASE/gg` or in the config file
+Gambit database, set via cli as `--gambit_db /DATABASE/gg` or in the config file
+LexicMap database, set via cli as `--lexicmap_db /DATABASE/gg` or in the config file
 
 > [!NOTE]
 > Ganon is a bit special so you need to pass the database path, and the prefix used for the ganon database. If any field is missed an error will be raised.
-> Ganon database, set via cli as `--ganon.db /DATABASE/gg --ganon.db_prefix ganon_test` or in the config file
+> Ganon database, set via cli as `--ganon_db /DATABASE/gg --ganon_db_prefix ganon_test` or in the config file
 
 ## Credits
 
