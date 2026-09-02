@@ -11,17 +11,11 @@ nextflow_pipeline {
                 input = "$baseDir/tests/data/samplesheet.csv"
                 outdir = "$outputDir"
 
-                kraken2 { db = "$baseDir/tests/data/test_db" }
-
-                ganon {
-                        db = "$baseDir/tests/data/ganon_test"
-                        db_prefix = "ganon_test"
-                    }
-
-                lexicmap {
-                        db = "$baseDir/tests/data/lexicmap/db.lmi"
-                    }
-
+                kraken2_db = "$baseDir/tests/data/test_db"
+                ganon_db = "$baseDir/tests/data/ganon_test"
+                ganon_db_prefix = "ganon_test"
+                lexicmap_db = "$baseDir/tests/data/lexicmap/db.lmi"
+                checkm2_db = "$baseDir/tests/data/TestCheckm2DB.dmnd"
                 skip_gambit = true
 
 

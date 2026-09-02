@@ -21,6 +21,12 @@
         "exists": true,
         "pattern": "^([\\S\\s]*\\/)?[^\\s\\/]+\\.f(ast)?a(\\.gz)?$",
         "errorMessage": "Fasta file for assembly must be provided, cannot contain spaces and must have extension '.fa.gz' or '.fasta.gz'"
+      },
+      "checkm2": {
+        "type": "string",
+        "format": "file-path",
+        "pattern": "^([\\S\\s]*\\/)?[^\\s\\/]+\\.tsv$",
+        "errorMessage": "CheckM2 must be a file must be a tsv."
       }
     },
     "required": [
